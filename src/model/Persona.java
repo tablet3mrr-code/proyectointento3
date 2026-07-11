@@ -1,5 +1,6 @@
 package model;
-public class Persona {
+
+public class Persona implements Registrable {
 
     private int id;
     private String nombre;
@@ -33,6 +34,11 @@ public class Persona {
 
     public void setRol(String rol) {
         this.rol = rol;
+    }
+
+    @Override
+    public void mostrarResumen() {
+        System.out.println(toString());
     }
 
     @Override
