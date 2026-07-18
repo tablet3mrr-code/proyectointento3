@@ -19,6 +19,9 @@
             <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/data/guias</file>
             <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/data/tours</file>
             <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/data/reservas</file>
+            <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/src/exception/RutInvalidoException.java</file>
+            <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/src/model/Rut.java</file>
+            <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/src/model/Direccion.java</file>
         </group>
     </open-files>
 </project-private>

@@ -4,24 +4,11 @@ public class Proveedor extends Persona {
 
     private String servicio;
 
-    // Constructor antiguo
-    public Proveedor(int id, String nombre, String rol, String servicio) {
-        super(id, nombre, rol);
-        this.servicio = servicio;
-    }
+    public Proveedor(int id, String nombre, Rut rut,
+                     Direccion direccion, String servicio) {
 
-    // Nuevo constructor
-    public Proveedor(int id,
-                     String nombre,
-                     String rol,
-                     Rut rut,
-                     Direccion direccion,
-                     String telefono,
-                     String email,
-                     String servicio) {
-
-        super(id, nombre, rol, rut, direccion, telefono, email);
-        this.servicio = servicio;
+        super(id, nombre, rut, direccion);
+        setServicio(servicio);
     }
 
     public String getServicio() {
@@ -29,23 +16,30 @@ public class Proveedor extends Persona {
     }
 
     public void setServicio(String servicio) {
-        this.servicio = servicio;
+
+        if (servicio == null || servicio.isBlank()) {
+            throw new IllegalArgumentException(
+                    "El servicio no puede estar vacío."
+            );
+        }
+
+        this.servicio = servicio.trim();
     }
 
     @Override
     public void mostrarResumen() {
-
         System.out.println(
-                "Proveedor -> ID: " + getId() +
-                " | Nombre: " + getNombre() +
-                " | Servicio: " + servicio
+                "Proveedor -> "
+                        + getNombre()
+                        + " | RUT: " + getRut()
+                        + " | Servicio: " + servicio
         );
-
     }
 
     @Override
     public String toString() {
-        return super.toString() +
-                " | Servicio: " + servicio;
+        return super.toString()
+                + " | Servicio: "
+                + servicio;
     }
 }

@@ -4,22 +4,11 @@ public class Cliente extends Persona {
 
     private int puntos;
 
-    // Constructor antiguo
-    public Cliente(int id, String nombre, String rol, int puntos) {
-        super(id, nombre, rol);
-        this.puntos = puntos;
-    }
+    public Cliente(int id, String nombre, Rut rut,
+                   Direccion direccion, int puntos) {
 
-    // Nuevo constructor
-    public Cliente(int id, String nombre, String rol,
-                   Rut rut,
-                   Direccion direccion,
-                   String telefono,
-                   String email,
-                   int puntos) {
-
-        super(id, nombre, rol, rut, direccion, telefono, email);
-        this.puntos = puntos;
+        super(id, nombre, rut, direccion);
+        setPuntos(puntos);
     }
 
     public int getPuntos() {
@@ -27,6 +16,13 @@ public class Cliente extends Persona {
     }
 
     public void setPuntos(int puntos) {
+
+        if (puntos < 0) {
+            throw new IllegalArgumentException(
+                    "Los puntos no pueden ser negativos."
+            );
+        }
+
         this.puntos = puntos;
     }
 
@@ -34,16 +30,18 @@ public class Cliente extends Persona {
     public void mostrarResumen() {
 
         System.out.println(
-                "Cliente -> ID: " + getId() +
-                " | Nombre: " + getNombre() +
-                " | Puntos: " + puntos
+                "Cliente -> "
+                + getNombre()
+                + " | RUT: " + getRut()
+                + " | Puntos: " + puntos
         );
-
     }
 
     @Override
     public String toString() {
-        return super.toString() +
-                " | Puntos: " + puntos;
+
+        return super.toString()
+                + " | Puntos: "
+                + puntos;
     }
 }

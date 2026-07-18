@@ -2,48 +2,46 @@ package model;
 
 public class GuiaTuristico extends Persona {
 
-    private String idioma;
+    private String especialidad;
 
-    // Constructor antiguo (para mantener compatibilidad)
-    public GuiaTuristico(int id, String nombre, String rol, String idioma) {
-        super(id, nombre, rol);
-        this.idioma = idioma;
+    public GuiaTuristico(int id, String nombre, Rut rut,
+                         Direccion direccion, String especialidad) {
+
+        super(id, nombre, rut, direccion);
+        setEspecialidad(especialidad);
     }
 
-    // Nuevo constructor para la EFT
-    public GuiaTuristico(int id, String nombre, String rol,
-                         Rut rut,
-                         Direccion direccion,
-                         String telefono,
-                         String email,
-                         String idioma) {
-
-        super(id, nombre, rol, rut, direccion, telefono, email);
-        this.idioma = idioma;
+    public String getEspecialidad() {
+        return especialidad;
     }
 
-    public String getIdioma() {
-        return idioma;
-    }
+    public void setEspecialidad(String especialidad) {
 
-    public void setIdioma(String idioma) {
-        this.idioma = idioma;
+        if (especialidad == null || especialidad.isBlank()) {
+            throw new IllegalArgumentException(
+                    "La especialidad no puede estar vacía."
+            );
+        }
+
+        this.especialidad = especialidad.trim();
     }
 
     @Override
     public void mostrarResumen() {
 
         System.out.println(
-                "Guía Turístico -> ID: " + getId() +
-                " | Nombre: " + getNombre() +
-                " | Idioma: " + idioma
+                "Guía Turístico -> "
+                + getNombre()
+                + " | RUT: " + getRut()
+                + " | Especialidad: " + especialidad
         );
-
     }
 
     @Override
     public String toString() {
-        return super.toString() +
-                " | Idioma: " + idioma;
+
+        return super.toString()
+                + " | Especialidad: "
+                + especialidad;
     }
 }
