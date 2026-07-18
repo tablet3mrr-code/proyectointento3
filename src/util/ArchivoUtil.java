@@ -1,5 +1,7 @@
 package util;
+
 import model.Persona;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -11,34 +13,38 @@ public class ArchivoUtil {
 
         ArrayList<Persona> lista = new ArrayList<>();
 
-        try {
-
-            BufferedReader br = new BufferedReader(new FileReader(archivo));
+        try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
 
             String linea;
 
             while ((linea = br.readLine()) != null) {
 
+                if (linea.trim().isEmpty()) {
+                    continue;
+                }
+
                 String[] datos = linea.split(",");
 
-                int id = Integer.parseInt(datos[0]);
-                String nombre = datos[1];
-                String rol = datos[2];
+                if (datos.length >= 3) {
 
-                Persona persona = new Persona(id, nombre, rol);
+                    int id = Integer.parseInt(datos[0].trim());
+                    String nombre = datos[1].trim();
+                    String rol = datos[2].trim();
 
-                lista.add(persona);
+                    Persona persona = new Persona(id, nombre, rol);
+
+                    lista.add(persona);
+                }
             }
-
-            br.close();
 
         } catch (IOException e) {
 
-            System.out.println("Error al leer el archivo");
+            System.out.println("Error al leer el archivo: " + e.getMessage());
 
         } catch (NumberFormatException e) {
 
-            System.out.println("Error en el formato de datos");
+            System.out.println("Error en el formato de los datos.");
+
         }
 
         return lista;

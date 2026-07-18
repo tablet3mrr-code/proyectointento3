@@ -1,10 +1,24 @@
 package model;
+
 public class GuiaTuristico extends Persona {
 
     private String idioma;
 
+    // Constructor antiguo (para mantener compatibilidad)
     public GuiaTuristico(int id, String nombre, String rol, String idioma) {
         super(id, nombre, rol);
+        this.idioma = idioma;
+    }
+
+    // Nuevo constructor para la EFT
+    public GuiaTuristico(int id, String nombre, String rol,
+                         Rut rut,
+                         Direccion direccion,
+                         String telefono,
+                         String email,
+                         String idioma) {
+
+        super(id, nombre, rol, rut, direccion, telefono, email);
         this.idioma = idioma;
     }
 
@@ -18,10 +32,18 @@ public class GuiaTuristico extends Persona {
 
     @Override
     public void mostrarResumen() {
+
         System.out.println(
                 "Guía Turístico -> ID: " + getId() +
                 " | Nombre: " + getNombre() +
-                " | Idioma: " + idiomas
+                " | Idioma: " + idioma
         );
+
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                " | Idioma: " + idioma;
     }
 }

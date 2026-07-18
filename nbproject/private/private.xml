@@ -7,10 +7,18 @@
             <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/src/util/ArchivoUtil.java</file>
             <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/src/service/PersonaService.java</file>
             <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/src/app/Main.java</file>
-            <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/personas.csv</file>
+            <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/data/personas.csv</file>
             <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/src/model/Registrable.java</file>
             <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/src/model/GuiaTuristico.java</file>
             <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/src/model/Vehiculo.java</file>
+            <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/src/model/Cliente.java</file>
+            <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/src/model/Proveedor.java</file>
+            <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/src/model/Tour.java</file>
+            <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/src/model/Reserva.java</file>
+            <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/data/clientes</file>
+            <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/data/guias</file>
+            <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/data/tours</file>
+            <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/data/reservas</file>
         </group>
     </open-files>
 </project-private>
