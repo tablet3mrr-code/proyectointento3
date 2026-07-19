@@ -1,10 +1,7 @@
 package model;
-
 import exception.RutInvalidoException;
 
-/**
- * Representa un RUT chileno.
- */
+
 public class Rut {
 
     private String numero;
@@ -28,12 +25,6 @@ public class Rut {
         this.numero = limpiarRut(numero);
     }
 
-    /**
-     * Valida solamente el formato del RUT.
-     * Ejemplos válidos:
-     * 12345678-9
-     * 1234567-K
-     */
     private boolean esValido(String rut) {
 
         if (rut == null || rut.isBlank()) {
@@ -45,9 +36,7 @@ public class Rut {
         return rutLimpio.matches("\\d{7,8}-[0-9K]");
     }
 
-    /**
-     * Elimina puntos y espacios y convierte la K a mayúscula.
-     */
+    
     private String limpiarRut(String rut) {
 
         return rut.replace(".", "")

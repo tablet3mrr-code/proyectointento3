@@ -1,5 +1,4 @@
 package model;
-
 public class Tour {
 
     private int id;

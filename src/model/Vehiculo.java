@@ -1,5 +1,4 @@
 package model;
-
 public class Vehiculo implements Registrable {
 
     private String patente;

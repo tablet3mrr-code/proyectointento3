@@ -7,7 +7,6 @@
             <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/src/util/ArchivoUtil.java</file>
             <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/src/service/PersonaService.java</file>
             <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/src/app/Main.java</file>
-            <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/data/personas.csv</file>
             <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/src/model/Registrable.java</file>
             <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/src/model/GuiaTuristico.java</file>
             <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/src/model/Vehiculo.java</file>
@@ -22,6 +21,7 @@
             <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/src/exception/RutInvalidoException.java</file>
             <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/src/model/Rut.java</file>
             <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/src/model/Direccion.java</file>
+            <file>file:/C:/Users/Tomás/Documents/NetBeansProjects/LlanquihueTourApp/data/personas</file>
         </group>
     </open-files>
 </project-private>
